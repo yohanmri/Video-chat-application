@@ -1,6 +1,7 @@
 import express from 'express';
 import "dotenv/config";
 import authRoutes from './routes/auth.route.js';  
+import pageRoutes from './routes/pages.route.js';
 import {connectDB} from './lib/db.js';
 
 const app = express();
@@ -20,6 +21,8 @@ const PORT_SERVER = process.env.PORT
 // }); 
 app.use(express.json());
 app.use('/api/auth', authRoutes);
+
+app.use('/api/pages', pageRoutes);
 
 
 app.listen(PORT_SERVER, () => {
