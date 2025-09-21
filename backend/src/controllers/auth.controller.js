@@ -70,7 +70,7 @@ export async function login(req, res) {
 
 
                 
-        const token = jwt.sign({userId:newUser._id},process.env.JWT_SECRET_KEY,{
+        const token = jwt.sign({userId:User._id},process.env.JWT_SECRET_KEY,{
             expiresIn:'7d',
         })
         res.cookie("jwt", token,{
@@ -80,6 +80,7 @@ export async function login(req, res) {
         })
 
         res.status(200).json({success:true, user});
+
     } catch (error) {
       console.log("Error in login controller", error);
       res.status(500).json({message:"Server Error"});  
