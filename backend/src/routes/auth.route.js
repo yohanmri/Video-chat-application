@@ -17,7 +17,12 @@ router.post('/logout', logout);
 
 router.post('/onboarding',protectRoute, onboard);
 
+//forget-password......to be continued
 
+//reset-password.....to be continued
+
+
+//check if the user is logged in or not
 router.get('/me', protectRoute, (req, res) => {
     res.status(200).json({success:true, user:req.user});
 }); //No need to put into controller; just to see protected or not
