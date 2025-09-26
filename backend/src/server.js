@@ -1,8 +1,11 @@
 import express from 'express';
 import "dotenv/config";
+import cookieParser from 'cookie-parser';
+
 import authRoutes from './routes/auth.route.js';  
 import pageRoutes from './routes/pages.route.js';
 import {connectDB} from './lib/db.js';
+
 
 const app = express();
 const PORT_SERVER = process.env.PORT
@@ -20,6 +23,8 @@ const PORT_SERVER = process.env.PORT
 //     res.send('Log Out');
 // }); 
 app.use(express.json());
+app.use(cookieParser());
+
 app.use('/api/auth', authRoutes);
 
 app.use('/api/pages', pageRoutes);
