@@ -1,6 +1,7 @@
 import express from 'express';
 import "dotenv/config";
 import cookieParser from 'cookie-parser';
+import cors from "cors";
 
 import authRoutes from './routes/auth.route.js';  
 import userRoutes from './routes/user.route.js';
@@ -24,6 +25,11 @@ const PORT_SERVER = process.env.PORT
 // app.get('/api/auth/logout', (req, res) => {
 //     res.send('Log Out');
 // }); 
+app.use(cors({
+  origin:"http://localhost:5173",
+  credentials: true // allow frontend to send cookies
+}))
+
 app.use(express.json());
 app.use(cookieParser());
 
