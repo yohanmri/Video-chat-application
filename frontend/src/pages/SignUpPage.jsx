@@ -44,7 +44,7 @@ const handleSignup = (e) => {
                     {/* LOGO */}
                     <div className='mb-4 flex items-center justify-start gap-2'>
                       <ShipWheelIcon className='size-9 text-primary' />
-                      <span className='text-3xl fond-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider'>
+                      <span className='text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider'>
                         MML Connect
                       </span>
                     </div>
@@ -155,7 +155,7 @@ const handleSignup = (e) => {
                     <div className='text-center space-y-3 mt-6'>
                       <h2 className='text-xl font-semibold'>Connect with MML partners in Sri Lanka</h2>
                       <p className='opacity-70'>
-                        Build conversations, make learned friends, imrpove your connectivity platform in the world of Law
+                        Build conversations, make learned friends, improve your connectivity platform in the world of Law
                       </p>
                     </div>
                   

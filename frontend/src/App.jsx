@@ -17,7 +17,7 @@ const App = () => {
 
 
 //Tenstack Query
-const {authData,isLoading,error,} = useQuery({
+const {data: authData,isLoading,error,} = useQuery({
   queryKey:["authUser"],
 
   queryFn: async() =>{
